@@ -1,0 +1,33 @@
+#ext-drag {
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: -7.5px 7.5px rgba(136, 136, 136, .5);
+}
+#ext-drag-title {
+    border: solid;
+    border-bottom: none;
+    padding: 10px;
+    cursor: move;
+}
+#ext-drag-options {
+    display: flex;
+    justify-content: space-around;
+    border: solid;
+    border-top: none;
+}
+.ext-drag-option {
+    width: 100%;
+    height: 100%;
+    border-top: solid;
+    border-right: solid;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ext-drag-option:hover {
+    background-color: gray;
+}
+
+.ext-drag-option-end {
+    border-right: none;
+}

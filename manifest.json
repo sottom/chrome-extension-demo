@@ -1,0 +1,45 @@
+{
+    "manifest_version": 2,
+
+    "name"        : "Chrome Helper",
+    "description" : "Demo for IS 413",
+    "version"     : "2.1",
+
+    "browser_action" : {
+      "default_title": "Chrome Helper"
+    },
+
+    "icons" : {
+    },
+
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": [
+            "lib/jquery/jquery-3.3.1.min.js",
+            "lib/jquery/jquery-ui.min.js",
+
+            "lib/utilities.js",
+            "content/controller.js"
+        ],
+        "css" : [
+            "lib/jquery/jquery-ui.min.css",
+            "css/dragbox.css"
+        ],
+        "run_at" : "document_end"
+      }
+    ],
+
+    "background" : {
+        "scripts" : [
+            "lib/utilities.js",
+            "background/controller.js"
+        ],
+        "persistent": false
+    },
+
+    "permissions" : [
+      "tabs",
+      "<all_urls>"
+    ]
+  }
